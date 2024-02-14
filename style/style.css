@@ -190,6 +190,24 @@ button:hover,
   margin-top: -10px;
 }
 
+.menuBtn {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .header__menu {
+    display: none;
+  }
+  .header__cta {
+    display: none;
+  }
+  .menuBtn {
+    display: flex;
+    justify-content: end;
+    width: 1000%;
+    font-size: 20px;
+  }
+}
 .hero {
   background-color: hsl(0, 0%, 98%);
 }
@@ -381,4 +399,115 @@ button:hover,
 .article__desc {
   font-size: 13px;
   color: hsl(233, 8%, 62%);
+}
+
+.footer {
+  background-color: hsl(233, 26%, 24%);
+  color: hsl(0, 0%, 100%);
+  padding: 40px;
+  text-align: center;
+}
+@media (min-width: 64em) {
+  .footer .container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 3fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: "logo links1 links2 cta" "social links1 links2 copyright";
+    justify-items: start;
+    gap: 16px;
+  }
+}
+.footer a {
+  color: hsl(0, 0%, 100%);
+}
+.footer__logo {
+  display: inline-block;
+}
+@media (max-width: 63.9375em) {
+  .footer__logo {
+    margin-bottom: 24px;
+  }
+}
+@media (min-width: 64em) {
+  .footer__logo {
+    grid-area: logo;
+  }
+}
+@media (max-width: 63.9375em) {
+  .footer__social {
+    margin-bottom: 24px;
+  }
+}
+@media (min-width: 64em) {
+  .footer__social {
+    margin-top: -50px;
+    grid-area: social;
+  }
+}
+.footer__social a {
+  display: inline-block;
+  margin-left: 10px;
+  transition: all 300ms ease-in-out;
+}
+.footer__social a:hover {
+  color: hsl(136, 65%, 51%);
+}
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 64em) {
+  .footer__links {
+    justify-content: space-between;
+    align-items: start;
+  }
+}
+@media (min-width: 64em) {
+  .footer__links.col1 {
+    grid-area: links1;
+  }
+}
+@media (min-width: 64em) {
+  .footer__links.col2 {
+    grid-area: links2;
+  }
+}
+@media (max-width: 63.9375em) {
+  .footer__links.col2 {
+    margin-bottom: 24px;
+  }
+}
+.footer__links a {
+  line-height: 2.25;
+}
+.footer__links a:hover {
+  color: hsl(136, 65%, 51%);
+}
+@media (min-width: 64em) {
+  .footer__cta {
+    grid-area: cta;
+    text-align: right;
+    justify-self: end;
+    margin-top: 50px;
+  }
+}
+.footer__cta a.button {
+  margin-bottom: 24px;
+}
+@media (max-width: 39.9375) {
+  .footer__cta a.button {
+    margin-bottom: 24px;
+  }
+}
+.footer__copyright {
+  font-size: 10px;
+  color: hsl(233, 8%, 62%);
+}
+@media (min-width: 64em) {
+  .footer__copyright {
+    grid-area: copyright;
+    justify-self: end;
+    align-self: end;
+  }
 }/*# sourceMappingURL=style.css.map */
